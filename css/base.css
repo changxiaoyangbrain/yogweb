@@ -567,6 +567,10 @@ body {
     padding: 8px 0;
     position: relative;
     z-index: 10;
+    /* 与页面主体同宽并水平居中（主体为 950px 表格布局） */
+    max-width: 950px;
+    width: 950px;
+    margin: 20px auto 0 !important;
 }
 
 /* 常见底部容器背景置透，避免出现黑色底色 */

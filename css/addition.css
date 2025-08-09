@@ -74,8 +74,11 @@ footer,
     color: #d00;
     background: transparent !important;
     padding: 8px 0;
-    margin-top: -20px;
     position: relative;
+    /* 与主体同宽并居中，避免比内容更靠左 */
+    max-width: 950px;
+    width: 950px;
+    margin: 20px auto 0 !important;
 }
 .contentInnerFream {
 	width: 780px;
