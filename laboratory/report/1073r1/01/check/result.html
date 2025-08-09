@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<title>免疫年龄测试结果</title>
+<link rel="stylesheet" href="../../../../../css/base.css" type="text/css" media="screen,print">
+<link rel="stylesheet" type="text/css" href="../../../../../common/css/global_footer.css">
+<link rel="stylesheet" href="../../../../css/report.css" type="text/css" media="screen,print">
+</head>
+<body>
+<div class="text-center">
+<table role="presentation" width="950" border="0">
+<tr>
+<td height="100%"><script type="text/javascript">jsMenu();</script></td>
+<td width="721">
+<h1>免疫年龄测试结果</h1>
+<div id="result"></div>
+<p class="mt20"><a href="index.html">返回测试</a></p>
+</td>
+</tr>
+</table>
+</div>
+<script>
+(function(){
+  function getQuery(){
+    var q={};
+    var s=location.search.replace(/^\?/,'').split('&');
+    for(var i=0;i<s.length;i++){
+      if(!s[i]) continue;
+      var kv=s[i].split('=');
+      q[decodeURIComponent(kv[0])] = decodeURIComponent((kv[1]||'').replace(/\+/g,' '));
+    }
+    return q;
+  }
+  var q=getQuery();
+  var age=parseInt(q.a,10);
+  if (isNaN(age)) { age = null; }
+  var el=document.getElementById('result');
+  if (age==null){
+    el.innerHTML = '<p>缺少参数，无法计算结果。</p>';
+  } else {
+    var msg='您的免疫年龄：<strong>'+age+' 岁</strong>';
+    el.innerHTML = '<p>'+msg+'</p>';
+  }
+})();
+</script>
+</body>
+</html>

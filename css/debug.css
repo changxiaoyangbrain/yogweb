@@ -1,0 +1,3 @@
+/* Placeholder debug stylesheet for development markers; safe in production */
+:root { --debug-enabled: 0 }
+/* no visible styles by default */

@@ -551,3 +551,30 @@ a.icoType01 {
 		min-width: 950px;
 	}
 }
+
+/* --- Footer note overrides -------------------------------------------------
+   统一控制页面底部标注与底部区域背景，确保透明底、红色字、居中显示。
+---------------------------------------------------------------------------- */
+body {
+    background: #ffffff !important; /* 避免深色模式影响，确保首页底部非黑色 */
+}
+
+#site-footer-note {
+    display: block;
+    text-align: center;
+    color: #d00;
+    background: transparent !important;
+    padding: 8px 0;
+    position: relative;
+    z-index: 10;
+}
+
+/* 常见底部容器背景置透，避免出现黑色底色 */
+footer,
+#footer,
+.footer,
+#GlobalFooter,
+#commonftr {
+    background: transparent !important;
+    background-image: none !important;
+}
