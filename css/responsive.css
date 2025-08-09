@@ -1,0 +1,293 @@
+@charset "utf-8";
+
+/* ==========================================================================
+   响应式设计系统 - Responsive System
+   ========================================================================== */
+
+/* 媒体查询断点 */
+/*
+- mobile: 0-640px
+- tablet: 641px-1024px  
+- desktop: 1025px+
+- wide: 1281px+
+*/
+
+/* 基础响应式设置 */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    font-family: var(--font-family-zh, 'Microsoft JhengHei', 'PingFang SC', 'SimHei', sans-serif);
+}
+
+/* 图片响应式 */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 表格响应式 */
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.table-responsive table {
+    min-width: 600px;
+}
+
+/* 移动端优先设计 */
+@media screen and (max-width: 640px) {
+    /* 移动端基础设置 */
+    html {
+        font-size: 14px;
+    }
+    
+    body {
+        padding: 0;
+        margin: 0;
+    }
+    
+    /* 容器调整 */
+    .container {
+        padding: 0 0.5rem;
+    }
+    
+    /* 字体大小调整 */
+    h1 { font-size: 1.5rem; }
+    h2 { font-size: 1.25rem; }
+    h3 { font-size: 1.125rem; }
+    h4 { font-size: 1rem; }
+    h5 { font-size: 0.875rem; }
+    h6 { font-size: 0.75rem; }
+    
+    /* 间距调整 */
+    .p-4 { padding: 1rem; }
+    .p-3 { padding: 0.75rem; }
+    .p-2 { padding: 0.5rem; }
+    
+    .m-4 { margin: 1rem; }
+    .m-3 { margin: 0.75rem; }
+    .m-2 { margin: 0.5rem; }
+    
+    /* 表格移动端优化 */
+    table {
+        font-size: 0.875rem;
+    }
+    
+    .table-stack {
+        border: 0;
+    }
+    
+    .table-stack thead {
+        display: none;
+    }
+    
+    .table-stack tr {
+        display: block;
+        border: 1px solid var(--border-color, #e0e0e0);
+        margin-bottom: 0.5rem;
+        padding: 0.5rem;
+    }
+    
+    .table-stack td {
+        display: block;
+        text-align: right;
+        border: none;
+        padding: 0.25rem 0;
+    }
+    
+    .table-stack td::before {
+        content: attr(data-label) ': ';
+        font-weight: bold;
+        float: left;
+    }
+    
+    /* 科学研究区域移动端适配 */
+    .scienceArea .mikakuSec {
+        flex-direction: column !important;
+        gap: 1rem !important;
+    }
+    
+    .scienceArea .mikakuSec .photoBox,
+    .scienceArea .mikakuSec .textBox {
+        width: 100% !important;
+        float: none !important;
+    }
+    
+    .scienceArea .mikakuSec .textBox dl {
+        flex-direction: column !important;
+    }
+    
+    .scienceArea .mikakuSec .textBox dl dt,
+    .scienceArea .mikakuSec .textBox dl dd {
+        width: 100% !important;
+        order: unset !important;
+    }
+    
+    /* 链接区块移动端适配 */
+    .sciLinkBlock01 ul,
+    .sciLinkBlock02 ul,
+    .sciLinkBlock03 ul {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 0.5rem !important;
+    }
+    
+    .beautyLinkBlock01,
+    .sciLinkBlock01,
+    .sciLinkBlock02,
+    .sciLinkBlock03 {
+        background-size: contain !important;
+        background-position: center top !important;
+        min-height: 200px !important;
+        height: auto !important;
+    }
+}
+
+/* 平板端设计 */
+@media screen and (min-width: 641px) and (max-width: 1024px) {
+    html {
+        font-size: 15px;
+    }
+    
+    .container {
+        max-width: 960px;
+        padding: 0 1rem;
+    }
+    
+    /* 中等屏幕优化 */
+    .grid-cols-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .grid-cols-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* 科学区域平板适配 */
+    .scienceArea .mikakuSec {
+        gap: 1.5rem;
+    }
+    
+    .scienceArea .mikakuSec .photoBox {
+        width: 200px !important;
+    }
+    
+    .scienceArea .mikakuSec .textBox {
+        flex: 1;
+        width: auto !important;
+    }
+}
+
+/* 桌面端设计 */
+@media screen and (min-width: 1025px) {
+    html {
+        font-size: 16px;
+    }
+    
+    .container {
+        max-width: 1200px;
+    }
+    
+    /* 大屏幕优化 */
+    .grid-cols-xl-5 {
+        grid-template-columns: repeat(5, 1fr);
+    }
+    
+    .grid-cols-xl-6 {
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+/* 超宽屏设计 */
+@media screen and (min-width: 1281px) {
+    .container {
+        max-width: 1400px;
+    }
+    
+    html {
+        font-size: 18px;
+    }
+}
+
+/* 打印样式 */
+@media print {
+    * {
+        color: #000 !important;
+        background: #fff !important;
+        box-shadow: none !important;
+    }
+    
+    .no-print {
+        display: none !important;
+    }
+    
+    .print-break {
+        page-break-after: always;
+    }
+    
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+    
+    img {
+        max-width: 100% !important;
+        page-break-inside: avoid;
+    }
+}
+
+/* 高对比度模式 */
+@media (prefers-contrast: high) {
+    :root {
+        --primary-color: #000000;
+        --text-primary: #000000;
+        --bg-primary: #ffffff;
+        --border-color: #000000;
+    }
+    
+    .card {
+        border: 2px solid #000000;
+    }
+}
+
+/* 减少动画模式 */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* 深色模式支持 */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-primary: #1a1a1a;
+        --text-primary: #ffffff;
+        --border-color: #404040;
+        --bg-hover: #2a2a2a;
+        --bg-light: #333333;
+    }
+    
+    body {
+        background: var(--bg-primary);
+        color: var(--text-primary);
+    }
+    
+    .card {
+        background: #2a2a2a;
+        border: 1px solid #404040;
+    }
+}

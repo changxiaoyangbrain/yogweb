@@ -1,0 +1,376 @@
+@charset "utf-8";
+
+/* report.css
+------------------------------------------ */
+
+
+
+/* blockA
+------------------------------------------ */
+.blockA{margin-top:18px;}
+.blockA p.lead{margin-left:10px;width:383px;}
+.blockA dl{margin:15px 0 0 8px;}
+.blockA dt{float:left;width:22px;font-size:0;line-height:0;}
+.blockA dd.ageSelection{float:left;width:221px;font-size:0;line-height:0;margin-top:1px;}
+.blockA dd.selectDeta{float:left;width:72px;}
+.blockA dd.selectDeta select{width:72px; text-align:center;}
+.blockA dd.itemCheck{float:left;width:393px;margin-top:2px;}
+.blockA dd.itemCheck ul{margin-top:5px;}
+.blockA dd.itemCheck li{margin-top:2px;}
+.blockA dd.itemCheck li input{margin-right:8px;font-size:0;line-height:0;}
+.blockA dd.itemCheck li span{margin-left:21px;}
+
+.blockA p.linkBtn{font-size:0;line-height:0;margin:26px 0 0 4px;}
+.blockA p.supervision{margin:13px 0 0 10px;}
+
+
+
+
+/* blockB
+------------------------------------------ */
+.blockB{margin-top:18px;}
+.blockB p.lead{margin:18px 0 0 10px;}
+.blockB p.linkBtn{margin:30px 0 0 4px;font-size:0;line-height:0;}
+.blockB p.supervision{margin:13px 0 0 10px;}
+
+
+/* resultSec */
+.blockB .resultSec{margin-left:10px;}
+.blockB .resultSec p.text{float:left;width:154px;}
+.blockB .resultSec .resultBox{
+	width:210px;
+	margin: 0 auto;
+	background:url(../report/images/1073r101check_bg_age_top.gif) no-repeat left top;
+	zoom:1;
+	padding-top:8px;
+	}
+.blockB .resultSec .resultBox .divA{
+	background:url(../report/images/1073r101check_bg_age_bottom.gif) no-repeat left bottom;
+	zoom:1;
+	padding-bottom:8px;
+	}
+.blockB .resultSec .resultBox .divB{
+	background:url(../report/images/1073r101check_bg_age_body.gif) repeat-y left top;
+	zoom:1;
+	}
+.blockB .resultSec .resultBox p.age{color:#5e4f48;font-size:130%;font-weight:bold;line-height:0.9;text-align:center;}
+.blockB .resultSec .resultBox p.age span{font-size:250%;}
+
+
+/* checkSec */
+.blockB .checkSec{
+	zoom:1;
+	padding-bottom:8px;
+	margin-top:16px;
+	}
+.blockB .checkSec h2{font-size:0;line-height:0;}
+.blockB .checkSec .checkBox{margin:0 10px 0 12px; padding:10px 0 1px 0;}
+.blockB .checkSec .checkBox .improves{float:left;width:300px;}
+.blockB .checkSec .checkBox .decrease{float:right;width:300px;}
+.blockB .checkSec .checkBox h3{}
+.blockB .checkSec .checkBox .improves h3{margin-left:50px;}
+.blockB .checkSec .checkBox .decrease h3{margin-left:37px;}
+.blockB .checkSec .checkBox li{ margin-top:3px;text-indent:-21px;padding-left:21px;}
+.blockB .checkSec .checkBox li.first{margin-top:10px;}
+.blockB .checkSec .checkBox li span{font-size:0;line-height:0;margin-right:8px; margin-top:8px;}
+.blockB .checkSec .checkBox li span img{margin-bottom:-2px;position:relative;}
+
+/* detailSec */
+.blockB .detailSec{
+	background:url(../img/report/report_1073r1_03_pop01/bg_detail_top.gif) no-repeat left top;
+	padding-top:5px;
+	margin: 20px auto;
+	width: 494px;
+	zoom:1;
+	}
+.blockB .detailSec .divA{
+	background:url(../img/report/report_1073r1_03_pop01/bg_detail_bottom.gif) no-repeat left bottom;
+	padding-bottom:5px;
+	zoom:1;
+	}
+.blockB .detailSec .divB{background:url(../img/report/report_1073r1_03_pop01/bg_detail_body.gif) repeat-y left top;zoom:1;}
+.blockB .detailSec table{width: 472px; font-size: 13px;margin:0 10px;color: #4b4b4b;padding-top: 6px;}
+.blockB .detailSec th{padding-bottom: 6px;font-weight:bold;color:#005bac;padding-right:10px;width:60px; text-align:left;}
+.blockB .detailSec td{padding-bottom: 6px;padding-right:4px;vertical-align:top;}
+.blockB .detailSec td span{font-weight:bold;margin-right:4px;}
+
+
+.ml120 { margin-left: 120px; }
+
+.italic{ font-style:italic;}
+
+/* repLinkBlock01
+------------------------------------------ */
+.repLinkBlock01 {
+	background:url(../report/images/report_bg_01.gif) left top no-repeat;
+	height:268px;
+	padding:12px 0 12px 12px;
+}
+.repLinkBlock01 ul:after {
+	content: "";
+	display: block;
+	clear:both;
+}
+.repLinkBlock01 ul li{
+	/*display:inline-block;*/
+	float:left;
+}
+
+/* repLinkBlock02
+------------------------------------------ */
+.repLinkBlock02 {
+	background:url(../report/images/report_bg_03.gif) left top no-repeat;
+	height:369px;
+	padding:12px 0 12px 12px;
+}
+
+
+.repLinkBlock02[data-date='221117'] {
+    height: 235px;
+}
+
+.repLinkBlock02[data-column="1"] {
+    height: 115px;
+}
+
+.repLinkBlock02 ul:after {
+	content: "";
+	display: block;
+	clear:both;
+}
+.repLinkBlock02 ul li{
+		float:left;
+}
+
+/* repLinkBlock03
+------------------------------------------ */
+.repLinkBlock03 {
+	background:url(../report/images/report_bg_03.gif) left top no-repeat;
+	height:369px;
+	padding:12px 0 12px 12px;
+}
+
+
+.caption01 {
+	text-align:center;
+	display: block;
+}
+
+
+.resultBlock01 {
+	background:url(../report/images/area01_bg_03.png) left bottom no-repeat;
+	padding-bottom: 10px;
+}
+.resultBlock01Inner01 {
+	background:url(../report/images/area01_bg_01.png) left top no-repeat;
+	padding-top: 10px;
+}
+
+.resultBlock01Inner02 {
+	background:url(../report/images/area01_bg_02.png) repeat-y;
+	padding: 14px;
+}
+.resultBlock01 .head {
+	font-weight: bold;
+	border-bottom: 2px dotted #cbcaca;
+	color: #464646;
+	font-size: 16px;
+	padding-bottom: 9px;
+}
+
+.resultBlock01 .body {
+	padding-top: 9px;
+	font-size: 14px;
+	line-height: 18px;
+	color: #4b4b4b;
+}
+
+/* repLinkBlock04
+------------------------------------------ */
+.repLinkBlock04 {
+	background:url(../report/images/report_bg_04.gif) left top no-repeat;
+	height:498px;
+	padding:12px 0 12px 12px;
+}
+.repLinkBlock04 ul:after {
+	content: "";
+	display: block;
+	clear:both;
+}
+.repLinkBlock04 ul li{
+	/*display:inline-block;*/
+	float:left;
+}
+
+tr .p15 {
+    border: 1px solid #ccc;
+}
+/* detailSec */
+.blockC .detailSec{
+	background:url(../img/report/report_1073r1_03_pop01/bg_detail_top.gif) no-repeat left top;
+	padding-top:5px;
+	margin: 20px auto;
+	width: 494px;
+	zoom:1;
+	}
+.blockC .detailSec .divA{
+	background:url(../img/report/report_1073r1_03_pop01/bg_detail_bottom.gif) no-repeat left bottom;
+	zoom:1;
+	/*height:192px;*/
+	padding-bottom:5px;
+	}
+
+.blockC .detailSec .divB{background:url(../img/report/report_1073r1_03_pop01/bg_detail_body.gif) repeat-y left top;zoom:1;
+	/*height:192px;*/
+}
+.blockC .detailSec table{width: 472px; font-size: 13px;margin:0 10px;color: #4b4b4b;padding-top: 6px;}
+.blockC .detailSec th{padding-bottom: 6px;font-weight:bold;color:#005bac;padding-right:10px;width:80px; text-align:left; vertical-align:top;}
+.blockC .detailSec td{padding-bottom: 12px;padding-right:4px;vertical-align:top; line-height:1.3;}
+.blockC .detailSec td span{font-weight:bold;margin-right:4px;}
+
+/* detailSec */
+.blockD .detailSec{
+	background:url(../img/report/report_1073r1_03_pop01/bg_detail_top.gif) no-repeat left top;
+	padding-top:5px;
+	margin: 20px auto;
+	width: 494px;
+	zoom:1;
+	}
+.blockD .detailSec .divA{
+	background:url(../img/report/report_1073r1_03_pop01/bg_detail_bottom.gif) no-repeat left bottom;
+	zoom:1;
+	height:220px;
+	padding-bottom:5px;
+	}
+
+.blockD .detailSec .divB{background:url(../img/report/report_1073r1_03_pop01/bg_detail_body.gif) repeat-y left top;zoom:1;
+	height:220px;
+}
+.blockD .detailSec table{width: 472px; font-size: 13px;margin:0 10px;color: #4b4b4b;padding-top: 6px;}
+.blockD .detailSec th{padding-bottom: 6px;font-weight:bold;color:#005bac;padding-right:10px;width:7em; text-align:left;}
+.blockD .detailSec td{padding-bottom: 6px;padding-right:4px;vertical-align:top;}
+.blockD .detailSec td span{font-weight:bold;margin-right:4px;}
+
+/* 2017/10/24 追記 */
+.drawingNoteW600{width: 600px; margin-left: auto; margin-right: auto;}
+
+/* 230515 */
+.sectionBlock01[data-date='230515'] h4 {
+	font-size: 16px;
+	font-weight: normal;
+	margin: 40px 0 0 106px;
+}
+
+.sectionBlock01[data-date='230515'] h4 + div {
+	max-width: 494px;
+	margin: 0 auto;
+	border: 1px solid #cfcfcf;
+}
+
+.sectionBlock01[data-date='230515'] figure {
+	text-align: center;
+	position: relative;
+	margin: 0;
+}
+
+.sectionBlock01[data-date='230515'] figure img {
+	display: block;
+}
+
+.sectionBlock01[data-date='230515'] figure:not(:first-child) {
+	margin-top: 50px;
+}
+
+.sectionBlock01[data-date='230515'] figure figcaption {
+	position: absolute;
+	font-weight: bold;
+    left: 50%;
+    transform: translate(-50%, 0);
+    top: 10px;
+}
+
+.sectionBlock01[data-date='230515'] .blockB + small {
+	font-size: 12px;
+	margin-left: 120px;
+	display: block;
+	color: #4b4b4b;
+}
+
+.sectionBlock01[data-date='230515'] .blockB .divB td {
+	vertical-align: middle;
+}
+
+/* --------------------------------
+    /report/1073r1/03/06/
+-------------------------------- */
+.report-list>li {
+	margin-bottom: 10px;
+}
+
+.report-txt-annotation {
+	color: #666;
+	font-size: 12px;
+	display: block;
+	font-weight: normal;
+}
+
+.report-txt-annotation>span {
+  float: left;
+  padding-right: 5px
+}
+
+.report-txt-annotation-body {
+  float: none !important;
+  display: block;
+  overflow: hidden
+}
+
+.report-txt-annotation-body>:last-child {
+  margin-bottom: 0
+}
+
+.report-graf {
+	text-align: center;
+}
+.report-img img {
+	height: auto;
+}
+.figcaption {
+	color: #666;
+  font-size: 12px;
+	text-align: center;
+}
+
+.report-list-child>li {
+	font-size: 14px
+}
+
+.report-list-child>li>span {
+margin-right: 5px;
+white-space: nowrap;
+float: left
+}
+
+.report-list-child>li>:last-child {
+margin-bottom: 0
+}
+
+.report-list-child>li:last-child {
+margin-bottom: 0
+}
+
+.report-list-child-body {
+display: block;
+overflow: hidden
+}
+
+.report-list-child-body>:last-child {
+margin-bottom: 0
+}
+
+/* 2024/10/30 追記 */
+/* repLinkBlock04
+------------------------------------------ */
+.repLinkBlock04 {
+	height:760px;
+}

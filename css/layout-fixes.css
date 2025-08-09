@@ -1,0 +1,46 @@
+/* ==========================================================================
+   首页布局修复 - Layout Fixes for Homepage - 简单版本
+   ========================================================================== */
+
+/* 右侧栏目容器 - 2x2网格 */
+#contents .styleArea .indexContentMenuUl {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    height: 620px;
+}
+
+/* 右侧栏目卡片 */
+#contents .styleArea .indexContentMenuUl .indexContentMenuLi {
+    width: calc(50% - 5px);
+    height: 300px;
+}
+
+/* 隐藏所有返回页首按钮 - 全局强制规则 */
+* {
+    /* 隐藏所有可能的返回页首按钮 */
+}
+
+/* 特定元素隐藏 */
+.pageTop01,
+div.pageTop01,
+li.pageTop01,
+a.pageTop01,
+a[href*="#wrap"],
+a[alt="返回页首"],
+img[alt="返回页首"],
+img[src*="cmn_pagetop"],
+img[src*="pagetop"],
+*[class*="pageTop"],
+*[class*="pagetop"],
+*[class*="PageTop"],
+*[alt*="返回页首"],
+*[alt*="页首"] {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    position: absolute !important;
+    left: -9999px !important;
+    width: 0 !important;
+    height: 0 !important;
+}

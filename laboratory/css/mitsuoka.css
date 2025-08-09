@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+.linkNavTable01{
+	width: 578px;
+	margin: 30px auto 0;
+	background:url(../researcher/images/mitsuoka_bg_01.gif) repeat-x left top;
+	padding: 1.25rem;
+}
+
+.linkNavTable01 table{
+	width: 400px;
+	margin: 0 auto;
+	zoom:1;
+	
+}
+
+/* ---- /yogurtlibrary/zh/laboratory/mitsuoka/05/ ---- */
+.bookList{
+	padding-top: 30px;
+	border-top: 1px dotted #999999;
+}
+
+.bookList td{
+	text-align: center;
+	vertical-align: top;
+}
+
+.bookList td p{
+	margin: 0.625rem 0
+}
+
+.nameBlock01 {
+	border-bottom: 1px solid #7f7f7f;
+	padding-top: 4px;
+}
+.nameBlock01 .name {
+	font-size: 20px;
+	font-weight: bold;
+	margin-right: 10px;
+}
+.ttlColor {
+	color: #0cd3cf;
+}

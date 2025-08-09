@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+@import "footer_main.css";
+
+/*\*//*/
+  @import url("footer_ie5mac.css");
+/**/
+
+/*------------------------------------------------------------------
+
+ie5win import
+
+*/
+@media tty {
+ i{content:"\";/*" "*/}} @import url('footer_ie5win.css'); /*";}
+}/* */

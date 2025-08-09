@@ -1,0 +1,52 @@
+@charset "utf-8";
+
+/* beautyLinkBlock01
+------------------------------------------ */
+.beautyLinkBlock01 {
+	background:url(../beauty/images/beauty_bg_01.png) left top no-repeat;
+	padding: 0.75rem 0 12px 12px;
+}
+
+/* questionBlock01
+------------------------------------------ */
+.questionBlock01{
+	padding: 0.3125rem 0 19px 40px;
+	margin: 0 0 20px 0;
+	background: url(../beauty/images/beauty_ico_01.png) left top no-repeat;
+	border-bottom: 1px dotted #999999;
+}
+
+.questionBlock01 p{
+	font-weight:bold;
+	font-size: 18px;
+	color: #fc8b27;
+}
+
+/* answerBlock01
+------------------------------------------ */
+.answerBlock01{
+	padding: 0 0 0 40px;
+	background: url(../beauty/images/beauty_ico_02.png) left top no-repeat;
+	margin: 0 0 50px 0;
+}
+
+/* beauty02Block01
+------------------------------------------ */
+.beauty02Block01 {
+	/*width: 600px;
+	margin: 10px auto 30px;*/
+}
+.beauty02Block01 .borderBtm {
+	padding-bottom: 10px;
+	border-bottom: 1px dotted #999999;
+
+}
+
+.caption01 {
+	display:block;
+	padding-top: 10px;
+	font-size: 10px;
+	line-height:14px;
+	text-align:center;
+	margin-bottom: 0px;
+}

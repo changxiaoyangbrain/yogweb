@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="现代化酸奶研究网站 - 高性能CSS架构">
+    
+    <title>YogWeb - 现代化酸奶研究网站</title>
+    
+    <!-- 关键CSS内联 - 首屏优化 -->
+    <style>
+        /* 关键CSS将被内联在这里以减少渲染阻塞 */
+        :root {
+            --primary-color: #00053F;
+            --secondary-color: #C27D3D;
+            --text-primary: #4b4b4b;
+            --bg-primary: #ffffff;
+            --font-family-zh: 'Microsoft JhengHei', 'PingFang SC', 'SimHei', sans-serif;
+        }
+        
+        * { box-sizing: border-box; }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: var(--font-family-zh);
+            font-size: 1rem;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background-color: var(--bg-primary);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        .loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--bg-primary);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+        }
+        
+        .loading-screen.hide {
+            opacity: 0;
+            pointer-events: none;
+        }
+        
+        .loader {
+            width: 40px;
+            height: 40px;
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid var(--primary-color);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        @media screen and (max-width: 640px) {
+            .container { padding: 0 0.5rem; }
+            body { font-size: 14px; }
+        }
+    </style>
+    
+    <!-- DNS预连接 -->
+    <link rel="preconnect" href="//fonts.googleapis.com">
+    <link rel="preconnect" href="//cdn.jsdelivr.net">
+    
+    <!-- 预加载关键资源 -->
+    <link rel="preload" href="/css/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/css/main.css"></noscript>
+    
+    <!-- 异步加载非关键CSS -->
+    <link rel="preload" href="/style/css/science.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/style/css/science.css"></noscript>
+    
+    <!-- 第三方组件懒加载 -->
+    <link rel="preload" href="/common/css/slick.css" as="style" media="print" onload="this.media='all'">
+    <link rel="preload" href="/common/css/magnific-popup.css" as="style" media="print" onload="this.media='all'">
+</head>
+<body>
+    <!-- 加载屏幕 -->
+
+    <!-- 跳转到主内容 -->
+    <a href="#main-content" class="skip-to-main sr-only">跳转到主内容</a>
+    
+    <!-- 页面内容 -->
+    <header class="sticky-top">
+        <div class="container">
+            <h1>YogWeb - 现代化酸奶研究网站</h1>
+            <nav>
+                <ul class="nav nav-horizontal">
+                    <li><a href="#" class="nav-link">首页</a></li>
+                    <li><a href="#" class="nav-link">研究</a></li>
+                    <li><a href="#" class="nav-link">美容</a></li>
+                    <li><a href="#" class="nav-link">早餐</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main id="main-content">
+        <div class="container">
+            <section class="hero-section">
+                <h2>欢迎来到现代化酸奶研究网站</h2>
+                <p>探索酸奶的科学奥秘，享受健康生活方式</p>
+                <button class="btn btn-primary btn-large">开始探索</button>
+            </section>
+            
+            <!-- 内容区域 -->
+            <section class="content-section">
+                <div class="grid grid-cols-3 gap-4">
+                    <article class="card">
+                        <h3>科学研究</h3>
+                        <p>深入了解酸奶的营养价值和健康益处</p>
+                    </article>
+                    <article class="card">
+                        <h3>美容护理</h3>
+                        <p>发现酸奶在美容护理中的神奇功效</p>
+                    </article>
+                    <article class="card">
+                        <h3>早餐搭配</h3>
+                        <p>学习如何制作营养丰富的酸奶早餐</p>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </main>
+    
+    <footer class="bg-gray-800 text-white p-8">
+        <div class="container text-center">
+            <p>&copy; 2024 YogWeb. 保留所有权利。</p>
+        </div>
+    </footer>
+    
+    <!-- 性能优化脚本 -->
+    <script>
+        // 页面加载完成后隐藏加载屏幕
+        window.addEventListener('load', function() {
+            const loadingScreen = document.getElementById('loadingScreen');
+            loadingScreen.classList.add('hide');
+            setTimeout(() => {
+                loadingScreen.style.display = 'none';
+            }, 500);
+        });
+        
+        // 异步加载CSS
+        function loadCSS(href) {
+            const link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.href = href;
+            document.head.appendChild(link);
+        }
+        
+        // 懒加载非关键CSS
+        setTimeout(() => {
+            loadCSS('/css/animations.css');
+            loadCSS('/css/modern-features.css');
+        }, 100);
+        
+        // 图片懒加载
+        if ('IntersectionObserver' in window) {
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src;
+                        img.classList.remove('lazy');
+                        imageObserver.unobserve(img);
+                    }
+                });
+            });
+            
+            document.querySelectorAll('img[data-src]').forEach(img => {
+                imageObserver.observe(img);
+            });
+        }
+        
+        // Web Vitals 监控
+        function reportWebVitals() {
+            if (typeof performance !== 'undefined') {
+                window.addEventListener('load', () => {
+                    const paintEntries = performance.getEntriesByType('paint');
+                    const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint');
+                    if (fcp) {
+                        console.log('First Contentful Paint:', fcp.startTime.toFixed(2) + 'ms');
+                    }
+                    
+                    const navigationEntry = performance.getEntriesByType('navigation')[0];
+                    if (navigationEntry) {
+                        console.log('DOM Content Loaded:', navigationEntry.domContentLoadedEventEnd.toFixed(2) + 'ms');
+                        console.log('Load Complete:', navigationEntry.loadEventEnd.toFixed(2) + 'ms');
+                    }
+                });
+            }
+        }
+        
+        reportWebVitals();
+    </script>
+</body>
+</html>

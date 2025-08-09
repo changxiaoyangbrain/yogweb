@@ -1,0 +1,119 @@
+@charset "utf-8";
+
+/* scienceLinkBlock01
+------------------------------------------ */
+.sciLinkBlock01 {
+	background:url(../choshoku/images/choshoku_bg_01.gif) left top no-repeat;
+	height:271px;
+	padding: 0.75rem 0 12px 12px;
+}
+.sciLinkBlock01 ul:after{
+	content: "";
+	display:block;
+	/* clear: both; */ display: flex; flex-wrap: wrap;
+}
+.sciLinkBlock01 ul li{
+	/* /* float: left converted to flex item */ */ display: flex; flex-direction: row;
+}
+
+/* scienceLinkBlock02
+------------------------------------------ */
+.sciLinkBlock02 {
+	background:url(../choshoku/images/choshoku_bg_01.gif) left top no-repeat;
+	height:213px;
+	padding: 0.75rem 0 12px 12px;
+  margin-bottom:30px;
+}
+.sciLinkBlock02 ul:after{
+	content: "";
+	display:block;
+	/* clear: both; */ display: flex; flex-wrap: wrap;
+}
+.sciLinkBlock02 ul li{
+	/* /* float: left converted to flex item */ */ display: flex; flex-direction: row;
+}
+
+/* scienceLinkBlock03
+------------------------------------------ */
+.sciLinkBlock03 {
+	background:url(../choshoku/images/choshoku_bg_01.gif) left top no-repeat;
+	height:302px;
+	padding: 0.75rem 0 12px 12px;
+  margin-bottom:30px;
+}
+.sciLinkBlock03 ul:after{
+	content: "";
+	display:block;
+	/* clear: both; */ display: flex; flex-wrap: wrap;
+}
+.sciLinkBlock03 ul li{
+	/* /* float: left converted to flex item */ */ display: flex; flex-direction: row;
+}
+
+/* recipe
+------------------------------------------ */
+table.recipe dl.foods dt{
+  /* float: left; */ display: flex; flex-direction: row;
+  width:60%;
+}
+table.recipe dl.foods dt.indent{
+  text-indent:-1em;
+  padding-left:1em;
+}
+table.recipe dl.foods dd{
+  padding-left:65%;
+}
+table.recipe dl.foods dd:after{
+	content: "";
+	display:block;
+	/* clear: both; */ display: flex; flex-wrap: wrap;
+}
+table.recipe ul.how li{
+  text-indent:-1em;
+  padding-left:1em;
+}
+table.recipe ul.how li.noindent{
+  text-indent:0;
+  padding-left:0;
+}
+
+/* 响应式Flexbox增强 */
+@media screen and (max-width: 640px) {
+    .mikakuSec {
+        flex-direction: column !important;
+        gap: 1rem !important;
+    }
+    
+    .mikakuSec .photoBox,
+    .mikakuSec .textBox {
+        width: 100% !important;
+        flex: none !important;
+    }
+    
+    .sciLinkBlock01 ul,
+    .sciLinkBlock02 ul,
+    .sciLinkBlock03 ul {
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+}
+
+/* Recipe表格Grid增强 */
+table.recipe {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+}
+
+table.recipe dl.foods {
+    display: grid;
+    grid-template-columns: 60% 1fr;
+    gap: 0.5rem;
+    align-items: start;
+}
+
+@media screen and (max-width: 640px) {
+    table.recipe dl.foods {
+        grid-template-columns: 1fr;
+    }
+}

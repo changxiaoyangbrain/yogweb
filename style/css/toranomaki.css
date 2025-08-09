@@ -1,0 +1,56 @@
+.toranomaki {
+	background:url(../dictionary/images/tora_bg_01.gif) repeat;
+}
+
+.toranomakiInner{
+	padding: 0.9375rem;
+	background:url(../dictionary/images/tora_bg_02.gif) top no-repeat;
+}
+
+.toranomakiList {
+	border-top: 1px solid #b4b4b4;
+	border-left: 1px solid #b4b4b4;
+	border-right: 1px solid #b4b4b4;
+	width: 671px;
+	margin: 0 auto;
+}
+
+.toranomakiList .head {
+	cursor:pointer;
+	font-size: 15px;
+	color: #fc8b27;
+	font-weight: bold;
+	border-bottom: 1px solid #b4b4b4;
+	height: 60px;
+	line-height:60px;
+	background:url(../dictionary/images/tora_bg_01.png) left top;
+}
+.toranomakiList .head.open span {
+	background:url(../dictionary/images/tora_ico_02.png) no-repeat 630px center;
+}
+
+.toranomakiList .head span {
+	display:block;
+	width: 656px;
+	height:100%;
+	padding-left: 15px;
+	background:url(../dictionary/images/tora_ico_01.png) no-repeat 630px center;
+}
+.toranomakiList .body {
+	border-bottom: 1px solid #b4b4b4;
+	display:none;
+	padding: 0.625rem 20px;
+	background: var(--bg-primary);
+}
+
+.toranomakiList .btn {
+	text-align: right;
+}
+
+.toranomakiList #toranomaki20 .imageCenter {
+	text-align: center;
+}
+
+.tableBlock23 td{
+	padding-left: 10px;
+}

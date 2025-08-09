@@ -1,0 +1,165 @@
+
+<!-- 现代CSS已集成 -->
+<!-- 现代化CSS系统 - 在原有CSS之后加载 -->
+<link rel="stylesheet" href="/css/variables.css" type="text/css">
+<link rel="stylesheet" href="/css/responsive.css" type="text/css">
+<link rel="stylesheet" href="/css/layout.css" type="text/css">
+<link rel="stylesheet" href="/css/components.css" type="text/css">
+<link rel="stylesheet" href="/css/utilities.css" type="text/css">
+<link rel="stylesheet" href="/css/animations.css" type="text/css">
+<link rel="stylesheet" href="/css/modern-features.css" type="text/css">
+<link rel="stylesheet" href="/css/layout-fixes.css" type="text/css">
+
+<!-- 开发模式调试工具 -->
+<link rel="stylesheet" href="/css/debug.css" type="text/css">
+<script src="/js/debug.js" type="text/javascript"></script>
+
+<style>
+/* 现代CSS与原有样式的兼容层 */
+.compatibility-layer {
+    /* 确保现代CSS不会破坏原有布局 */
+}
+
+/* 平滑过渡原有元素到现代系统 */
+#wrap {
+    max-width: none; /* 保持原有宽度控制 */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* 保持原有的日式网站风格 */
+body {
+    font-family: var(--font-family-zh), "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Microsoft JhengHei", sans-serif;
+}
+
+/* 现代化改进 */
+.laboratoryArea,
+.contentInnerFream,
+.indexContentMenuUl {
+    transition: all 0.3s ease;
+}
+
+.highlight:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* 响应式改进 */
+@media screen and (max-width: 768px) {
+    .indexContentMenuUl {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .indexContentMenuLi {
+        width: 100% !important;
+        margin: 0 !important;
+    }
+}
+</style>
+<!DOCTYPE html>
+<html lang="zh"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>酸奶・乳酸菌信息网站 | 明治酸奶资料库</title>
+<meta name="Author" content="明治酸奶资料库">
+<meta name="keywords" content="明治酸奶资料库,酸奶,乳酸菌,研究,明治">
+<link rel="canonical" href="index.html" />
+<!-- Device check removed for local deployment -->
+<link rel="stylesheet" href="css/base.css" type="text/css">
+<link rel="stylesheet" href="css/addition.css" type="text/css">
+<link rel="stylesheet" href="css/top.css" type="text/css">
+<link href="common/css/slick.css" rel="stylesheet" type="text/css">
+<link href="common/css/magnific-popup.css" rel="stylesheet" type="text/css">
+<script src="common/js/common.js" type="text/javascript"></script>
+<script src="common/js/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="js/index.js" type="text/javascript"></script>
+<script src="common/js/slick.min.js"></script>
+<script src="common/js/jquery.magnific-popup.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(function(){
+// 禁用图片轮询，只显示第一张图片
+var setImg = '#yogurtViewer';
+$(setImg).children('img').css({opacity:'0'});
+$(setImg + ' img:first').css({opacity:'1', zIndex:'20'});
+});
+</script>
+<div id="wrap">
+<div id="body">
+<!-- ==================== Contents Area ==================== -->
+<div id="contents">
+<div id="mainContents">
+	<div id="flashContent">
+		<div id="yogurtViewer"><img src="images/indexImagesNew/mainvisual-slide-03.jpg" /></div>
+	</div>
+<!-- /flashContent -->
+</div>
+<!-- ==================== contentA Area ==================== -->
+<div id="contentA">
+<div class="contentInnerFream">
+<div class="laboratoryArea" data-date="221117"><img src="images/indexImagesNew/laboratoryTitle.jpg" class="indexContentTitle" alt="酸奶实验室　为您讲解酸奶领域最尖端的研究内容和基础知识"><ul class="indexContentMenuUl borderB"><li class="indexContentMenuLi bgNone"><a href="laboratory/report/index.html"><img src="images/indexImagesNew/laboratory1Lab.jpg" class="centerImage highlight" alt="乳酸菌研究最前沿"> </a><p class="laboratoryAreaMenuText mt05">为您介绍乳酸菌相关研究的最新消息</p></li>
+<li class="indexContentMenuLi bgNone">
+<ul class="indexContentMenuUl02">
+<li class="firstChild"><a href="laboratory/report/lb81/top/index.html"><img src="images/indexImagesNew/laboratory1_btn_01.gif" alt="LB81 乳酸菌" class="centerImage highlight"></a></li>
+<li><a href="laboratory/report/oll2716/top/index.html"><img src="images/indexImagesNew/laboratory1_btn_02.gif" alt="乳酸菌 OLL2716株" class="centerImage highlight"></a></li>
+<li><a href="laboratory/report/1073r1/top/index.html"><img src="images/indexImagesNew/laboratory1_btn_03.gif" alt="乳酸菌 1073R -1株" class="centerImage highlight"></a></li>
+<li><a href="laboratory/report/pa-3/top/index.html"><img src="images/indexImagesNew/laboratory1_btn_04.gif" alt="乳酸菌 PA-3株" class="centerImage highlight"></a></li>
+<li><a href="laboratory/report/collagen-peptide/top/index.html"><img src="images/indexImagesNew/laboratory1_btn_05.gif" alt="含有胶原蛋白肽及牛奶神经酰胺的酸奶" class="centerImage highlight"></a></li>
+<li><a href="laboratory/report/oll2712/top/index.html"><img src="images/indexImagesNew/laboratory1_btn_07.png" alt="乳酸菌OLL2712株" class="centerImage highlight"></a></li>
+<li><a href="laboratory/report/oll1251/top/index.html"><img src="images/indexImagesNew/laboratory1_btn_08.gif" alt="乳酸菌OLL1251株和乳酸菌OLS3290株" class="centerImage highlight"></a></li>
+</ul>
+</li>
+</ul>
+<ul class="indexContentMenuUl">
+<li class="indexContentMenuLi indexContentMenuLi02"><a href="laboratory/yogurt/index.html"><img src="images/indexImagesNew/laboratory2yogurt.jpg" class="centerImage highlight" alt="酸奶基础知识"> </a>
+<p class="laboratoryAreaMenuText mt05">介绍酸奶的历史、制作方法和机制</p>
+</li>
+<li class="indexContentMenuLi indexContentMenuLi02 bgNone"><a href="laboratory/researcher/index.html"><img src="images/indexImagesNew/laboratory3researcher.jpg" class="centerImage highlight" alt="酸奶的研究开发者"> </a>
+<p class="laboratoryAreaMenuText mt05">为您介绍在酸奶研究史上留下伟大足迹的科学家们</p>
+</li>
+</ul>
+<!-- /laboratoryArea --></div>
+<div class="styleArea" data-date="221117"><img src="images/indexImagesNew/styleTitle.jpg" class="indexContentTitle" alt="酸奶风采 释疑解惑：为您讲解酸奶与美容和健康的关系，以及与酸奶有关的疑问">
+<ul class="indexContentMenuUl">
+<li class="indexContentMenuLi">
+<div class="borderB">
+<a href="style/beauty/index.html"><img src="images/indexImagesNew/style1beauty.jpg" class="centerImage highlight" alt="酸奶与美容和健康讲座"> </a>
+<p class="styleAreaMenuText mt05">介绍酸奶与美容和健康的关系以及一些有益的信息</p>
+</div>
+</li>
+<li class="indexContentMenuLi bgNone">
+<div class="borderB">
+<a href="style/dictionary/index.html"><img src="images/indexImagesNew/style2toranomaki.jpg" class="centerImage highlight" alt="释疑解惑！酸奶词典"> </a>
+<p class="styleAreaMenuText mt05">回复大家关于酸奶的疑问！</p>
+</div>
+</li>
+<li class="indexContentMenuLi indexContentMenuLi02 pt10"><a href="style/science/index.html"><img src="images/indexImagesNew/style3topic.jpg" class="centerImage highlight" alt="科学验证！酸奶与料理的神奇关系"> </a>
+<p class="styleAreaMenuText mt05">酸奶会使料理更好吃吗？<br>
+介绍部分科学验证实例</p>
+</li>
+<li class="indexContentMenuLi indexContentMenuLi02 bgNone pt10"><a href="style/choshoku/index.html"><img src="images/indexImagesNew/style4choshoku.jpg" class="centerImage highlight" alt="从今天开始“肠食”生活"> </a>
+<p class="styleAreaMenuText mt05">早上吃，肠道健康每一天！<br>
+什么是&quot;肠食&quot;？</p>
+</li>
+</ul>
+<!-- /styleArea --></div>
+<!-- /contentInnerFream --></div>
+<!-- ==================== //contentInnerFream Area ==================== -->
+</div>
+<!-- ==================== //ContentsA Area ==================== -->
+<div class="contentInnerFream">
+<!-- ==================== topPageInfo Area ==================== -->
+<!-- ==================== //topPageInfo Area ==================== -->
+<!-- /contentInnerFream --></div>
+</div>
+<!-- ==================== //Contents Area ==================== -->
+</div>
+<!-- //div#body -->
+</div>
+<!-- //div#wrap -->
+</body>
+</html>

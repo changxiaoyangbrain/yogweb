@@ -1,0 +1,78 @@
+@charset "utf-8";
+
+/* scienceArea /yogurtlibrary/zh/style/science/03/
+------------------------------------------ */
+.scienceArea{position:relative;padding: 0.0rem 0px 0px 0px;}
+
+/* blockTypeA */
+.scienceArea .first{margin-top:0;}
+.scienceArea .last{padding-bottom:20px;border-bottom:1px solid #000099;}
+.scienceArea .blockTypeA h2{margin:0;padding:0;font-size:0;line-height:0;}
+.scienceArea .blockTypeA p{}
+.scienceArea .blockTypeA p.picture{font-size:10px;}
+.scienceArea .blockTypeA p.btn{margin-right:-6px;}
+.scienceArea .blockTypeA table{margin-top:5px;}
+.scienceArea .blockTypeA table th,
+.scienceArea .blockTypeA table td{font-size:12px;color:#555555;text-align:left;vertical-align:top;}
+.scienceArea .blockTypeA table th{font-weight:bold;}
+.scienceArea .blockTypeA table td{padding-left:10px;}
+.scienceArea .blockTypeA table.tableTypeA{width:100%;}
+.scienceArea .blockTypeA table.tableTypeA thead tr.type4 th{width:25%;}
+.scienceArea .blockTypeA table.tableTypeA thead th{padding: 0.3125rem;border-bottom:2px solid #b2b2b2;line-height:1.3;font-weight:normal;text-align:center;}
+.scienceArea .blockTypeA table.tableTypeA thead th{border-left:1px solid #b2b2b2;}
+.scienceArea .blockTypeA table.tableTypeA thead th.first{border-right:1px solid #b2b2b2;border-left:0;}
+.scienceArea .blockTypeA table.tableTypeA tbody th,
+.scienceArea .blockTypeA table.tableTypeA tbody td{padding: 0.3125rem;border-bottom:1px solid #b2b2b2;line-height:1.3;font-weight:normal;text-align:center;}
+.scienceArea .blockTypeA table.tableTypeA tbody th{border-right:1px solid #b2b2b2;}
+.scienceArea .blockTypeA table.tableTypeA tbody td{border-left:1px solid #b2b2b2;}
+.scienceArea .blockTypeA table.tableTypeA tbody td strong{color:#ff0000;}
+
+/* mikakuSec */
+.scienceArea .mikakuSec{position:relative;margin-top:20px;border:1px solid #bbbbbb;padding: 0.625rem;display: flex; gap: 1rem; align-items: flex-start;}
+.scienceArea .mikakuSec .photoBox{/* float: left; */ display: flex; flex-direction: row;width:159px;}
+.scienceArea .mikakuSec .photoBox p{margin:0;padding:0;font-size:0;line-height:0;}
+.scienceArea .mikakuSec .textBox{/* float: right; */ margin-left: auto;width:305px;}
+.scienceArea .mikakuSec .textBox p{margin:0;padding:0;color:#555555;font-size:12px;line-height:1.6;text-align:left;}
+.scienceArea .mikakuSec .textBox dl{ display: flex; flex-direction: row-reverse; gap: 1rem; }
+.scienceArea .mikakuSec .textBox dl,
+.scienceArea .mikakuSec .textBox dt,
+.scienceArea .mikakuSec .textBox dd{margin:0;padding:0;}
+.scienceArea .mikakuSec .textBox dl dt{/* float: right; */ margin-left: auto;width:142px;text-align:left;}
+.scienceArea .mikakuSec .textBox dl dd{/* float: left; */ display: flex; flex-direction: row;width:153px;color:#555555;font-size:12px;line-height:1.6;text-align:left;}
+
+/* scienceLinkBlock01
+------------------------------------------ */
+.sciLinkBlock01 {
+	background:url(../science/images/science_bg_01.gif) left top no-repeat;
+	height:295px;
+	padding: 0.75rem 0 12px 12px;
+}
+.sciLinkBlock01 ul:after{
+	content: "";
+	display:block;
+	/* clear: both; */ display: flex; flex-wrap: wrap;
+}
+.sciLinkBlock01 ul li{
+	/* /* float: left converted to flex item */ */ display: flex; flex-direction: row;
+}
+
+/* 响应式Flexbox增强 */
+@media screen and (max-width: 640px) {
+    .mikakuSec {
+        flex-direction: column !important;
+        gap: 1rem !important;
+    }
+    
+    .mikakuSec .photoBox,
+    .mikakuSec .textBox {
+        width: 100% !important;
+        flex: none !important;
+    }
+    
+    .sciLinkBlock01 ul,
+    .sciLinkBlock02 ul,
+    .sciLinkBlock03 ul {
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+}

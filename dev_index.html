@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YogWeb 开发入口 - 实际网站调试</title>
+    
+    <!-- 现代化CSS系统 -->
+    <link rel="stylesheet" href="/css/main.css">
+    
+    <style>
+        body {
+            margin: 0;
+            padding: 2rem;
+            font-family: var(--font-family-zh);
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+        
+        .dev-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+        }
+        
+        .dev-header {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--border-color, #e0e0e0);
+        }
+        
+        .dev-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .dev-card {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 1.5rem;
+            border-left: 4px solid var(--primary-color, #00053F);
+            transition: all 0.3s ease;
+        }
+        
+        .dev-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+        }
+        
+        .dev-card h3 {
+            margin: 0 0 1rem 0;
+            color: var(--primary-color, #00053F);
+        }
+        
+        .dev-links {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0 0 0;
+        }
+        
+        .dev-links li {
+            margin: 0.5rem 0;
+        }
+        
+        .dev-links a {
+            color: var(--text-primary, #333);
+            text-decoration: none;
+            padding: 0.5rem;
+            display: block;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .dev-links a:hover {
+            background: rgba(0, 5, 63, 0.1);
+        }
+        
+        .status-bar {
+            background: var(--primary-color, #00053F);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .debug-info {
+            background: rgba(40, 167, 69, 0.1);
+            border: 1px solid rgba(40, 167, 69, 0.3);
+            padding: 1rem;
+            border-radius: 6px;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="dev-container">
+        <div class="status-bar">
+            <span>🚀 YogWeb 开发环境 - 实际网站调试模式</span>
+            <span id="dev-status">✅ 服务中</span>
+        </div>
+        
+        <div class="dev-header">
+            <h1>🧪 YogWeb 开发调试入口</h1>
+            <p>选择要调试和优化的实际网站页面</p>
+        </div>
+        
+        <div class="dev-grid">
+            <div class="dev-card">
+                <h3>🏠 主要页面</h3>
+                <p>网站的核心页面，已集成现代CSS系统</p>
+                <ul class="dev-links">
+                    <li><a href="/index.html" target="_blank">🏠 网站首页</a></li>
+                    <li><a href="/laboratory/yogurt/index.html" target="_blank">🧪 酸奶实验室</a></li>
+                    <li><a href="/laboratory/report/index.html" target="_blank">📊 研究报告</a></li>
+                </ul>
+            </div>
+            
+            <div class="dev-card">
+                <h3>🎨 样式系统</h3>
+                <p>现代化CSS架构和组件库</p>
+                <ul class="dev-links">
+                    <li><a href="/modern_features_demo.html" target="_blank">✨ 现代特性演示</a></li>
+                    <li><a href="/performance_optimized.html" target="_blank">⚡ 性能优化版</a></li>
+                    <li><a href="/css/main.css" target="_blank">📄 主样式文件</a></li>
+                </ul>
+            </div>
+            
+            <div class="dev-card">
+                <h3>🔧 开发工具</h3>
+                <p>调试和优化工具</p>
+                <ul class="dev-links">
+                    <li><a href="javascript:window.yogwebDebugger && window.yogwebDebugger.toggle()">🛠️ 切换调试模式</a></li>
+                    <li><a href="/DEV_GUIDE.md" target="_blank">📖 开发指南</a></li>
+                    <li><a href="/CSS_GUIDE.md" target="_blank">🎨 CSS指南</a></li>
+                </ul>
+            </div>
+            
+            <div class="dev-card">
+                <h3>📱 响应式测试</h3>
+                <p>不同设备尺寸预览</p>
+                <div style="margin-top: 1rem;">
+                    <button onclick="testResponsive('375x667')" class="btn btn-small">📱 iPhone</button>
+                    <button onclick="testResponsive('768x1024')" class="btn btn-small">📱 iPad</button>
+                    <button onclick="testResponsive('1200x800')" class="btn btn-small">💻 桌面</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="debug-info">
+            <h4>🔍 调试快捷键</h4>
+            <ul style="margin: 0.5rem 0;">
+                <li><strong>Ctrl + Shift + D</strong> - 切换调试工具栏</li>
+                <li><strong>F12</strong> - 打开浏览器开发者工具</li>
+                <li><strong>Ctrl + U</strong> - 查看页面源码</li>
+            </ul>
+        </div>
+        
+        <div class="debug-info" style="background: rgba(255, 193, 7, 0.1); border-color: rgba(255, 193, 7, 0.3);">
+            <h4>⚠️ 注意事项</h4>
+            <ul style="margin: 0.5rem 0;">
+                <li>所有修改都会实时反映在浏览器中</li>
+                <li>原始文件已备份到 backup_original/ 目录</li>
+                <li>建议在调试完成后运行构建脚本生成生产版本</li>
+            </ul>
+        </div>
+    </div>
+    
+    <script>
+        // 简单的响应式测试函数
+        function testResponsive(size) {
+            const [width, height] = size.split('x').map(Number);
+            window.open(window.location.origin + '/index.html', '_blank', 
+                `width=${width},height=${height},resizable=yes,scrollbars=yes`);
+        }
+        
+        // 检查服务器状态
+        fetch('/__dev__/status')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('dev-status').textContent = 
+                    data.status === 'running' ? '✅ 运行中' : '❌ 断开';
+            })
+            .catch(() => {
+                document.getElementById('dev-status').textContent = '❌ 断开';
+            });
+    </script>
+</body>
+</html>

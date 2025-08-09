@@ -1,0 +1,13 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* researcher.css
+------------------------------------------ */
+
+/* resLinkBlock01
+------------------------------------------ */
+.resLinkBlock01 {
+	background: url(../researcher/images/researcher_bg_01.gif) no-repeat left top;
+	height: 483px;
+	padding: 0.75rem 0 12px 12px;
+}

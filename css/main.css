@@ -1,0 +1,220 @@
+@charset "utf-8";
+
+/* ==========================================================================
+   YogWeb - 现代化酸奶研究网站样式系统
+   ========================================================================== */
+
+/* 基础系统 */
+@import url('variables.css');      /* CSS变量定义 */
+@import url('responsive.css');     /* 响应式基础设置 */
+
+/* 布局系统 */  
+@import url('layout.css');         /* 现代化布局系统 */
+
+/* 组件系统 */
+@import url('components.css');     /* 通用组件样式 */
+@import url('utilities.css');      /* 实用工具类 */
+/* 现代特性文件 */
+@import url('animations.css');        /* 动画和过渡效果 */
+@import url('modern-features.css');   /* 现代CSS特性 */
+
+
+/* 第三方组件 (保持不变) */
+/* 在HTML中单独引入:
+   - /common/css/slick.css
+   - /common/css/magnific-popup.css
+*/
+
+/* 页面特定样式 (保持不变) */
+/* 在HTML中按需引入:
+   - /style/css/science.css
+   - /style/css/beauty.css  
+   - /style/css/choshoku.css
+*/
+
+/* ==========================================================================
+   全局重置和基础设置
+   ========================================================================== */
+
+/* 现代化重置 */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family-zh);
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-primary);
+    background-color: var(--bg-primary, #ffffff);
+}
+
+/* 链接样式 */
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+/* 标题样式 */
+h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 1rem 0;
+    font-weight: bold;
+    line-height: 1.3;
+    color: var(--primary-color);
+}
+
+h1 { font-size: 2rem; }
+h2 { font-size: 1.75rem; }
+h3 { font-size: 1.5rem; }
+h4 { font-size: 1.25rem; }
+h5 { font-size: 1.125rem; }
+h6 { font-size: 1rem; }
+
+/* 段落和文本 */
+p {
+    margin: 0 0 1rem 0;
+    line-height: 1.6;
+}
+
+/* 列表 */
+ul, ol {
+    margin: 0 0 1rem 0;
+    padding-left: 2rem;
+}
+
+li {
+    margin-bottom: 0.25rem;
+}
+
+/* 表格基础样式 */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+th, td {
+    padding: 0.5rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color, #e0e0e0);
+}
+
+th {
+    font-weight: bold;
+    background-color: var(--bg-light, #f5f5f5);
+}
+
+/* 表单元素 */
+input, textarea, select {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+/* 图片 */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 代码 */
+code {
+    background-color: var(--bg-light, #f5f5f5);
+    padding: 0.125rem 0.25rem;
+    border-radius: 3px;
+    font-size: 0.875em;
+}
+
+pre {
+    background-color: var(--bg-light, #f5f5f5);
+    padding: 1rem;
+    border-radius: 4px;
+    overflow-x: auto;
+}
+
+pre code {
+    background: none;
+    padding: 0;
+}
+
+/* 分隔线 */
+hr {
+    border: none;
+    height: 1px;
+    background-color: var(--border-color, #e0e0e0);
+    margin: 2rem 0;
+}
+
+/* ==========================================================================
+   可访问性改进
+   ========================================================================== */
+
+/* 跳转到主内容链接 */
+.skip-to-main {
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    background: var(--primary-color);
+    color: white;
+    padding: 8px;
+    text-decoration: none;
+    z-index: 1000;
+}
+
+.skip-to-main:focus {
+    top: 6px;
+}
+
+/* 屏幕阅读器专用文本 */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* 焦点指示器 */
+:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* ==========================================================================
+   打印优化
+   ========================================================================== */
+
+@media print {
+    .no-print {
+        display: none !important;
+    }
+    
+    * {
+        color: #000 !important;
+        background: transparent !important;
+    }
+    
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+}
