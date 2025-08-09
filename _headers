@@ -1,0 +1,19 @@
+# Cloudflare Pages Headers Configuration
+/*
+  Cache-Control: max-age=31536000
+  X-Frame-Options: SAMEORIGIN
+  X-Content-Type-Options: nosniff
+
+/*.html
+  Cache-Control: max-age=0, no-cache, no-store, must-revalidate
+
+/*.css
+  Cache-Control: max-age=31536000
+  Content-Type: text/css; charset=utf-8
+
+/*.js
+  Cache-Control: max-age=31536000
+  Content-Type: application/javascript; charset=utf-8
+
+/images/*
+  Cache-Control: max-age=31536000
