@@ -223,17 +223,20 @@ Layout Adjust
 }
 
 .sectionBlock02 {
-	background:url(../laboratory/yogurt/images/area01_bg_03.png) left bottom no-repeat;
-	padding-bottom: 14px;
+    background: #ffffff !important;
+    background-image: none !important;
+    padding-bottom: 14px;
 }
 .sectionBlock02Inner01 {
-	background:url(../laboratory/yogurt/images/area01_bg_01.png) left top no-repeat;
-	padding-top: 14px;
+    background: #ffffff !important;
+    background-image: none !important;
+    padding-top: 14px;
 }
 
 .sectionBlock02Inner02 {
-	background:url(../laboratory/yogurt/images/area01_bg_02.png) repeat-y;
-	padding: 0.875rem 36px 14px 30px;
+    background: #ffffff !important;
+    background-image: none !important;
+    padding: 0.875rem 36px 14px 30px;
 }
 
 .sectionBlock02 .head {
@@ -252,30 +255,36 @@ Layout Adjust
 }
 
 .sectionBlock03{
-	background:url(../style/science/images/science_bg_02.gif) left top no-repeat;
-	padding-top:8px;
+    background: #ffffff !important;
+    background-image: none !important;
+    padding-top:8px;
 }
 .sectionBlock03Inner01{
-	background:url(../style/science/images/science_bg_04.gif) left bottom no-repeat;
-	padding-bottom:9px;
+    background: #ffffff !important;
+    background-image: none !important;
+    padding-bottom:9px;
 }
 .sectionBlock03Inner02{
-	background:url(../style/science/images/science_bg_03.gif) 0 0 repeat-y;
-	padding: 0.625rem 20px;
+    background: #ffffff !important;
+    background-image: none !important;
+    padding: 0.625rem 20px;
 }
 
 .sectionBlock04 {
-	background:url(../laboratory/yogurt/images/area03_bg_03.png) left bottom no-repeat;
-	padding-bottom: 10px;
+    background: #ffffff !important;
+    background-image: none !important;
+    padding-bottom: 10px;
 }
 .sectionBlock04Inner01 {
-	background:url(../laboratory/yogurt/images/area03_bg_01.png) left top no-repeat;
-	padding-top: 10px;
+    background: #ffffff !important;
+    background-image: none !important;
+    padding-top: 10px;
 }
 
 .sectionBlock04Inner02 {
-	background:url(../laboratory/yogurt/images/area03_bg_02.png) repeat-y;
-	padding: 0.875rem 40px 14px 30px;
+    background: #ffffff !important;
+    background-image: none !important;
+    padding: 0.875rem 40px 14px 30px;
 }
 
 .sectionBlock04 .head {
@@ -296,12 +305,12 @@ Layout Adjust
 /* ----headingBlock---- */
 .headingBlock01,
 .headingBlockB01 {
-	text-align:left;
-	padding-top: 20px;
-	padding-bottom: 20px;
-	margin-bottom: 20px;
-	background:url(../images/heading01_bg_01.png) repeat-x bottom left;
-
+    text-align:left;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    background: #ffffff !important;
+    background-image: none !important;
 }
 
 .headingBlock01 h1,
@@ -326,18 +335,17 @@ Layout Adjust
 	margin-bottom: 20px;
 }
 .headingBlock02 {
-	background:url(../images/heading02_bg_01.png) left top;
+    background: #ffffff !important;
 }
 .headingBlockB02 {
-	background:url(../images/headingB02_bg_01.png) left top;
+    background: #ffffff !important;
 }
 .headingBlock02 h2,
 .headingBlockB02 h2 {
-	color: var(--bg-primary);
-	font-size: 18px;
-	font-weight:bold;
-	padding: 0.0rem 10px 0px 16px;
-	line-height: 24px;
+    font-size: 18px;
+    font-weight:bold;
+    padding: 0.0rem 10px 0px 16px;
+    line-height: 24px;
 }
 .headingBlockC02 h2 {
 	color: #5e4f48;
@@ -346,10 +354,11 @@ Layout Adjust
 	line-height: 24px;
 }
 .headingBlock02 h2 {
-	background:url(../images/heading02_bg_02.png) repeat-y left top;
+    /* 背景已统一为白色，标题文字使用主题色以确保可见 */
+    color: #00bfbb;
 }
 .headingBlockB02 h2 {
-	background:url(../images/headingB02_bg_02.png) repeat-y left top;
+    color: #fc8b27;
 }
 
 .headingBlock03,
@@ -439,12 +448,57 @@ Layout Adjust
 .dirPathBlock01 {
 	font-size:13px;
 	line-height:18px;
-	margin-top: 15px;
-	margin-bottom: 30px;
+    margin-top: 15px;
+    margin-bottom: 30px;
 	color: var(--text-primary);
 }
 .dirPathBlock01 a {
 	color: #057ed8;
+}
+
+/* Breadcrumb alignment in 950/721 table layout */
+table[role="presentation"][width="950"] td[width="721"] .dirPathBlock01 {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+/* Ensure right content column text is left-aligned (parent may be .text-center) */
+table[role="presentation"][width="950"] td[width="721"] {
+    text-align: left;
+}
+
+/* Reduce side margins inside right content column for legacy pages */
+table[role="presentation"][width="950"] td[width="721"] .sectionBlock01,
+table[role="presentation"][width="950"] td[width="721"] .sectionBlock02,
+table[role="presentation"][width="950"] td[width="721"] .sectionBlock03,
+table[role="presentation"][width="950"] td[width="721"] .sectionBlock04 {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+/* Yogurt nav strip alignment inside right column */
+table[role="presentation"][width="950"] td[width="721"] .navWrap01 {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+/* Hard override: ensure most containers in right column are pure white */
+/* Exclude visual flow boxes that intentionally use background images */
+table[role="presentation"][width="950"] td[width="721"] div:not([class^="flowBox"]),
+table[role="presentation"][width="950"] td[width="721"] section,
+table[role="presentation"][width="950"] td[width="721"] ul,
+table[role="presentation"][width="950"] td[width="721"] li,
+table[role="presentation"][width="950"] td[width="721"] table,
+table[role="presentation"][width="950"] td[width="721"] tbody,
+table[role="presentation"][width="950"] td[width="721"] tr,
+table[role="presentation"][width="950"] td[width="721"] td,
+table[role="presentation"][width="950"] td[width="721"] p,
+table[role="presentation"][width="950"] td[width="721"] h1,
+table[role="presentation"][width="950"] td[width="721"] h2,
+table[role="presentation"][width="950"] td[width="721"] h3,
+table[role="presentation"][width="950"] td[width="721"] h4 {
+    background: #ffffff !important;
+    background-image: none !important;
 }
 
 /* ---- ico ---- */
@@ -559,6 +613,44 @@ body {
     background: #ffffff !important; /* 避免深色模式影响，确保首页底部非黑色 */
 }
 
+/* 统一全站背景为白色（兜底到常见容器） */
+html,
+body,
+#wrap,
+#body,
+#contents,
+#contentA,
+#mainContents,
+.text-center,
+table[role="presentation"][width="950"],
+#GlobalFooter,
+#footer,
+footer {
+    background: #ffffff !important;
+}
+
+/* 全站统一桌面版页面宽度 */
+#flashContent,
+.contentInnerFream,
+#yogurtViewer {
+    max-width: var(--page-width, 950px);
+}
+
+/* 统一以 950px 为页面版心宽度（覆盖旧式 table 属性宽度） */
+table[role="presentation"][width="950"],
+table[width="950"] {
+    width: var(--page-width, 950px) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* 右侧内容列宽度统一（仅作对齐用途，不改变实际内容排版） */
+td[width="721"],
+img[width="721"] {
+    width: var(--content-right-width, 721px) !important;
+}
+
+/* 让底部标注严格与右侧内容区（721px）居中对齐 */
 #site-footer-note {
     display: block;
     text-align: center;
@@ -567,10 +659,20 @@ body {
     padding: 8px 0;
     position: relative;
     z-index: 10;
-    /* 与页面主体同宽并水平居中（主体为 950px 表格布局） */
-    max-width: 950px;
-    width: 950px;
-    margin: 20px auto 0 !important;
+    /* 基于变量统一控制页面宽度与右栏宽度 */
+    width: var(--content-right-width, 721px);
+    max-width: var(--content-right-width, 721px);
+    margin-left: calc((100% - var(--page-width, 950px)) / 2 + var(--sidebar-width, 229px));
+    margin-top: 20px !important;
+}
+
+@media screen and (max-width: 767px) {
+    #site-footer-note {
+        width: auto;
+        max-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
 }
 
 /* 常见底部容器背景置透，避免出现黑色底色 */
@@ -580,5 +682,68 @@ footer,
 #GlobalFooter,
 #commonftr {
     background: transparent !important;
+    background-image: none !important;
+}
+
+/* Force light theme across the site even when OS is in dark mode */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-primary: #ffffff !important;
+        --text-primary: #4b4b4b !important;
+        --border-color: #e0e0e0 !important;
+    }
+    html, body {
+        background: #ffffff !important;
+        color: #4b4b4b !important;
+    }
+}
+
+/* --- Global white background overrides -----------------------------------
+   统一所有主要内容容器背景为白色，移除历史纹理/图片背景。
+--------------------------------------------------------------------------- */
+/* 首页左右两列大容器 */
+#contents .laboratoryArea,
+#contents .styleArea {
+    background: #ffffff !important;
+    background-image: none !important;
+}
+
+/* 基础知识/模块容器（原有点阵/条纹背景） */
+.sectionBlock01,
+.sectionBlock02,
+.sectionBlock02Inner01,
+.sectionBlock02Inner02,
+.sectionBlock03,
+.sectionBlock03Inner01,
+.sectionBlock03Inner02,
+.sectionBlock04,
+.sectionBlock04Inner01,
+.sectionBlock04Inner02,
+.attentionBlock01,
+.attentionBlock01Inner01,
+.attentionBlock01Inner02,
+.resultBlock01,
+.resultBlock01Inner01,
+.resultBlock01Inner02,
+.repLinkBlock01,
+.repLinkBlock02,
+.repLinkBlock03,
+.repLinkBlock04,
+.sciLinkBlock01 {
+    background: #ffffff !important;
+    background-image: none !important;
+}
+
+/* 标题条容器（去掉图片背景，仅保留默认底色） */
+.headingBlock01,
+.headingBlockB01,
+.headingBlock02,
+.headingBlockB02,
+.headingBlockC02,
+.headingBlock03,
+.headingBlockB03,
+.headingBlock04,
+.headingBlockB04 {
+    background: #ffffff !important;
     background-image: none !important;
 }

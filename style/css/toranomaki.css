@@ -1,10 +1,12 @@
 .toranomaki {
-	background:url(../dictionary/images/tora_bg_01.gif) repeat;
+    background: #ffffff !important;
+    background-image: none !important;
 }
 
 .toranomakiInner{
-	padding: 0.9375rem;
-	background:url(../dictionary/images/tora_bg_02.gif) top no-repeat;
+    padding: 0.9375rem;
+    background: #ffffff !important;
+    background-image: none !important;
 }
 
 .toranomakiList {
@@ -16,14 +18,15 @@
 }
 
 .toranomakiList .head {
-	cursor:pointer;
-	font-size: 15px;
-	color: #fc8b27;
-	font-weight: bold;
-	border-bottom: 1px solid #b4b4b4;
-	height: 60px;
-	line-height:60px;
-	background:url(../dictionary/images/tora_bg_01.png) left top;
+    cursor:pointer;
+    font-size: 15px;
+    color: #fc8b27;
+    font-weight: bold;
+    border-bottom: 1px solid #b4b4b4;
+    height: 60px;
+    line-height:60px;
+    background: #ffffff !important;
+    background-image: none !important;
 }
 .toranomakiList .head.open span {
 	background:url(../dictionary/images/tora_ico_02.png) no-repeat 630px center;

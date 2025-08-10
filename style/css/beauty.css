@@ -3,8 +3,9 @@
 /* beautyLinkBlock01
 ------------------------------------------ */
 .beautyLinkBlock01 {
-	background:url(../beauty/images/beauty_bg_01.png) left top no-repeat;
-	padding: 0.75rem 0 12px 12px;
+    background: #ffffff !important;
+    background-image: none !important;
+    padding: 0.75rem 0 12px 12px;
 }
 
 /* questionBlock01

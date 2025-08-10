@@ -1,21 +1,22 @@
 @charset "utf-8";
 body {
-	width: 100%;
-	height: 100%;
-	margin: 0px;
-	padding: 0.0rem;
-	display: block;
-	font-size: 12px;
-	padding-bottom: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0.0rem;
+    display: block;
+    font-size: 12px;
+    padding-bottom: 0;
+    background: #ffffff !important;
 }
 #contents {
-	width: 100%;
-	margin: 0px;
-	padding: 0.0rem;
-    background-color: white;
+    width: 100%;
+    margin: 0px;
+    padding: 0.0rem;
+    background-color: #ffffff !important;
 }
 #flashContent {
-	width: 950px;
+    width: var(--page-width);
 	margin-left: auto;
 	margin-right: auto;
 	margin-top:0px;
@@ -68,6 +69,7 @@ footer,
     background: transparent !important;
 }
 
+/* 与 base.css 保持一致，确保全站统一 */
 #site-footer-note {
     display: block;
     text-align: center;
@@ -75,10 +77,19 @@ footer,
     background: transparent !important;
     padding: 8px 0;
     position: relative;
-    /* 与主体同宽并居中，避免比内容更靠左 */
-    max-width: 950px;
-    width: 950px;
-    margin: 20px auto 0 !important;
+    width: var(--content-right-width, 721px);
+    max-width: var(--content-right-width, 721px);
+    margin-left: calc((100% - var(--page-width, 950px)) / 2 + var(--sidebar-width, 229px));
+    margin-top: 20px !important;
+}
+
+@media screen and (max-width: 767px) {
+    #site-footer-note {
+        width: auto;
+        max-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
 }
 .contentInnerFream {
 	width: 780px;
@@ -90,16 +101,18 @@ footer,
  //overflow: visible;
 }
 #contents .laboratoryArea {
-	float: left;
-	width: 388px;
-	height: 783px;
-	background-image: url(../images/indexImagesNew/contentMenuBackgroundLeft.png);
+    float: left;
+    width: 388px;
+    height: 783px;
+    background: #ffffff !important;
+    background-image: none !important;
 }
 #contents .styleArea {
-	float: right;
-	width: 388px;
-	height: 783px;
-	background-image: url(../images/indexImagesNew/contentMenuBackgroundRight.png);
+    float: right;
+    width: 388px;
+    height: 783px;
+    background: #ffffff !important;
+    background-image: none !important;
 }
 .indexContentTitle {
 	display: block;
@@ -109,6 +122,8 @@ footer,
 #contents .laboratoryArea[data-date='221117'] {
     background-repeat: no-repeat;
     height: 840px;
+    background: #ffffff !important;
+    background-image: none !important;
 }
 .indexContentMenuUl {
 	margin: 0.625rem 0 0 10px;
@@ -123,6 +138,8 @@ footer,
 #contents .styleArea[data-date='221117'] {
     background-repeat: no-repeat;
     height: 840px;
+    background: #ffffff !important;
+    background-image: none !important;
 }
 
 .indexContentMenuUl .bgNone{
@@ -228,7 +245,7 @@ div#wrap a{
 
 #yogurtViewer{
     margin: 0 auto;
-	width:950px;
+    width: var(--page-width);
 	height: 306px;
     text-align: left;
     overflow: hidden;

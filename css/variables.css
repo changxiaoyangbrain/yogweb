@@ -1,6 +1,12 @@
 /* CSS变量系统 - 现代化颜色和尺寸管理 */
 
 :root {
+  /* 页面版心（桌面端） */
+  --page-width: 950px;
+  /* 右侧内容区宽度（卡片区） */
+  --content-right-width: 721px;
+  /* 左侧导航/边栏宽度（自动根据上面两项得出） */
+  --sidebar-width: calc(var(--page-width) - var(--content-right-width));
   /* 主色调 */
   --primary-color: #00053F;
   --secondary-color: #C27D3D;

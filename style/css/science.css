@@ -43,9 +43,10 @@
 /* scienceLinkBlock01
 ------------------------------------------ */
 .sciLinkBlock01 {
-	background:url(../science/images/science_bg_01.gif) left top no-repeat;
-	height:295px;
-	padding: 0.75rem 0 12px 12px;
+    background: #ffffff !important;
+    background-image: none !important;
+    height:295px;
+    padding: 0.75rem 0 12px 12px;
 }
 .sciLinkBlock01 ul:after{
 	content: "";

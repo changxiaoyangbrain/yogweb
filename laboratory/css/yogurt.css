@@ -1,7 +1,8 @@
 .yogurtTopBlock01 {
-	background:url(../yogurt/images/yogurt_bg_001.gif) top no-repeat;
-	padding-top: 15px;
-	margin-top: 15px;
+    background: #ffffff !important;
+    background-image: none !important;
+    padding-top: 15px;
+    margin-top: 15px;
 }
 
 /* ----/yogurtlibrary/zh/laboratory/yogurt/world/---- */
@@ -12,18 +13,20 @@
 }
 
 .attentionBlock01 {
-	background:url(../yogurt/images/area02_bg_01.png) left top no-repeat;
+    background: #ffffff !important;
+    background-image: none !important;
 	padding-top: 4px;
 	width:706px;
 }
 
 .attentionBlock01Inner01 {
-	background:url(../yogurt/images/area02_bg_02.png) left bottom no-repeat;
+    background: #ffffff !important;
+    background-image: none !important;
 	padding-bottom: 4px;
 }
 
 .attentionBlock01Inner02 {
-	background: #e5f8f8;
+    background: #ffffff !important;
 	padding: 0.875rem 40px 14px 30px;
 }
 
@@ -227,5 +230,7 @@
 }
 
 .navWrap01 {
-	height: 81px;
+    height: 81px;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
 }

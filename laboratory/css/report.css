@@ -94,7 +94,8 @@
 /* repLinkBlock01
 ------------------------------------------ */
 .repLinkBlock01 {
-	background:url(../report/images/report_bg_01.gif) left top no-repeat;
+    background: #ffffff !important;
+    background-image: none !important;
 	height:268px;
 	padding: 0.75rem 0 12px 12px;
 }
@@ -111,7 +112,8 @@
 /* repLinkBlock02
 ------------------------------------------ */
 .repLinkBlock02 {
-	background:url(../report/images/report_bg_03.gif) left top no-repeat;
+    background: #ffffff !important;
+    background-image: none !important;
 	height:369px;
 	padding: 0.75rem 0 12px 12px;
 }
@@ -136,7 +138,8 @@
 /* repLinkBlock03
 ------------------------------------------ */
 .repLinkBlock03 {
-	background:url(../report/images/report_bg_03.gif) left top no-repeat;
+    background: #ffffff !important;
+    background-image: none !important;
 	height:369px;
 	padding: 0.75rem 0 12px 12px;
 }
@@ -147,16 +150,19 @@
 }
 
 .resultBlock01 {
-	background:url(../report/images/area01_bg_03.png) left bottom no-repeat;
+    background: #ffffff !important;
+    background-image: none !important;
 	padding-bottom: 10px;
 }
 .resultBlock01Inner01 {
-	background:url(../report/images/area01_bg_01.png) left top no-repeat;
+    background: #ffffff !important;
+    background-image: none !important;
 	padding-top: 10px;
 }
 
 .resultBlock01Inner02 {
-	background:url(../report/images/area01_bg_02.png) repeat-y;
+    background: #ffffff !important;
+    background-image: none !important;
 	padding: 0.875rem;
 }
 .resultBlock01 .head {
@@ -177,7 +183,8 @@
 /* repLinkBlock04
 ------------------------------------------ */
 .repLinkBlock04 {
-	background:url(../report/images/report_bg_04.gif) left top no-repeat;
+    background: #ffffff !important;
+    background-image: none !important;
 	height:498px;
 	padding: 0.75rem 0 12px 12px;
 }
